@@ -21,11 +21,11 @@ import java.nio.charset.Charset;
 public class TestFileUpload {
 //    String url = "http://localhost:8080/recon/check/file";
 //    String url = "http://10.50.8.29:8080/recon/check/file";
-    String url = "http://10.50.8.18/recon/check/file";
+    String url = "http://10.50.8.25:8080/recon/check/file/file?userId=1";
 
     @Test
     public void upload() {
-        String localFile = "G:\\视频\\spring cloud\\01.zip";
+        String localFile = "E:\\文档\\Nginx反射代理配置及部署说明.docx";
         CloseableHttpClient httpClient = null;
         CloseableHttpResponse response = null;
         try {

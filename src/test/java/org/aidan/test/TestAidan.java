@@ -2,6 +2,7 @@ package org.aidan.test;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -29,5 +30,20 @@ public class TestAidan {
     @Test
     public void testUUID() {
         System.out.println(UUID.randomUUID().toString().replace("-", ""));
+    }
+
+    @Test
+    public void testDecimal() {
+        System.out.println(new BigDecimal(-1).equals(new BigDecimal(-1)));
+
+    }
+
+    @Test
+    public void test111() {
+        String line = "invite_job01";
+        // 去掉末尾的数字
+        String reg = "[0-9]{2}$";
+        line = line.replaceAll(reg, "");
+        System.out.println(line);
     }
 }
