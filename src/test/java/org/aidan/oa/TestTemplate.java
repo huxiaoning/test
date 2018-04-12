@@ -36,8 +36,9 @@ public class TestTemplate {
     public void test2() {
         String url = ADDR + "/recon/check/oa/template";
         Map<String, Object> params = new HashMap<>();
-        params.put("userId", 1);
+        params.put("userId", "5ce74ec4f70e41a5a7db3e55ff67e423");
         params.put("type", 41);
+        params.put("orgId", "87126776211a4d7999f2a3a4dc582930");
         String result = HttpUtil.get(url, params, null);
         System.out.println(result);
     }

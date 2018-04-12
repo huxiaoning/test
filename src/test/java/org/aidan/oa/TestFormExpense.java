@@ -10,11 +10,11 @@ import java.util.*;
  */
 public class TestFormExpense {
 
-    private static final String ADDR = "http://localhost:8080";
+    private static final String ADDR = "http://localhost:8084";
 //    private static final String ADDR = "http://10.50.8.29:8084";
 //    private static final String ADDR = "http://10.50.8.29";
 
-    private static final String id = "cf89f94395124c37b97da12aff0e1e27";
+    private static final String id = "84be2b66bc2a4e73a936fb83e15705bd";
 
     @Test
     public void test1() {
@@ -56,7 +56,7 @@ public class TestFormExpense {
     public void test2() {
         String url = ADDR + "/recon/check/oa/form/base/" + id;
         Map<String, Object> params = new HashMap<>();
-        params.put("type", "96");
+        params.put("type", "117");
         String result = HttpUtil.get(url, params, null);
         System.out.println(result);
     }

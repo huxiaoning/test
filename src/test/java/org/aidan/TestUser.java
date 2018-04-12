@@ -11,11 +11,11 @@ import java.util.Map;
 
 public class TestUser {
 
-    private static final String ADDR = "http://localhost:8080";
-//    private static final String ADDR = "http://10.50.8.18:8081";
+    private static final String ADDR = "http://localhost:8082";
+//    private static final String ADDR = "http://10.50.8.23:8081";
 //    private static final String ADDR = "http://10.50.8.29";
 
-    private static final String id = "142cd3f1e2db426483f2abd45532abad";
+    private static final String id = "5ff6b2eaf861409fbdd8ca675fd4ed13";
 
     // 新增
     @Test
@@ -23,16 +23,16 @@ public class TestUser {
         String url = ADDR + "/recon/check/org/user";
         Map<String, Object> params = new HashMap<>();
         params.put("nickName", "十佳菜鸟");
-        params.put("password", "123456");
-        params.put("email", "huxiaoningsworld@sina.com");
-        params.put("mobile", "13140995776");
+        params.put("password", "6465a2a9b0c85f960c4757bde8ed48613f2e2f5fab85a4692dd65912b50a345a");
+        params.put("email", "a2@sina.com");
+        params.put("mobile", "13270008624");
         params.put("remarks", "备注信息1");
-        params.put("no", "001");
-        params.put("name", "张三");
-        params.put("phone", "0512-30984729");
-        params.put("userType", 99);
+        params.put("no", "002");
+        params.put("name", "研发部员工");
+        params.put("phone", "1123");
+        params.put("userType", null);
         params.put("photo", "aaa/bbb/ccc.png");
-        params.put("roleIds", "1,2,3,4");
+//        params.put("roleIds", "1,2,3,4");
         List<Map<String, Object>> orgQuarterList = new ArrayList<>();
         orgQuarterList.add(new HashMap() {{
             put("orgId", 1);
@@ -53,10 +53,27 @@ public class TestUser {
         String url = ADDR + "/recon/check/org/user";
         Map<String, Object> params = new HashMap<>();
         params.put("id", id);
-        params.put("nickName", "十佳菜鸟111");
-
-        params.put("photo", "aaa/bbb/ccc.png111");
-        params.put("orgIdsAndQuarters", "aaa:111,bbb:222");
+        params.put("nickName", "十佳菜鸟1");
+        params.put("password", "6465a2a9b0c85f960c4757bde8ed48613f2e2f5fab85a4692dd65912b50a345a");
+        params.put("email", "a2@sina.com");
+        params.put("mobile", "13270008624");
+        params.put("remarks", "备注信息1");
+        params.put("no", "002");
+        params.put("name", "研发部员工1");
+        params.put("phone", "1123");
+        params.put("userType", null);
+        params.put("photo", "aaa/bbb/ccc.png1");
+//        params.put("roleIds", "1,2,3,4");
+        List<Map<String, Object>> orgQuarterList = new ArrayList<>();
+        orgQuarterList.add(new HashMap() {{
+            put("orgId", 1);
+            put("quarter", 100);
+        }});
+        orgQuarterList.add(new HashMap() {{
+            put("orgId", 2);
+            put("quarter", 3);
+        }});
+        params.put("orgQuarterList", orgQuarterList);
         String result = HttpUtil.put(url, params, null);
         System.out.println(result);
     }
@@ -82,7 +99,7 @@ public class TestUser {
     public void test42() {
         String url = ADDR + "/recon/check/org/user/inf0";
         Map<String, Object> params = new HashMap<>();
-        params.put("userId", "1");
+        params.put("userId", "5ce74ec4f70e41a5a7db3e55ff67e423");
         params.put("parentId", "a7a99cdd756d4da8b87aac399516142b");
         String result = HttpUtil.get(url, params, null);
         System.out.println(result);

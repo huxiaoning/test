@@ -3,6 +3,8 @@ package org.aidan.test;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -45,5 +47,10 @@ public class TestAidan {
         String reg = "[0-9]{2}$";
         line = line.replaceAll(reg, "");
         System.out.println(line);
+    }
+
+    @Test
+    public void testDate() {
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(1522747000000L)));
     }
 }
