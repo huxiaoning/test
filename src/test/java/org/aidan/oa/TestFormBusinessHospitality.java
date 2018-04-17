@@ -11,7 +11,7 @@ public class TestFormBusinessHospitality {
 //    private static final String ADDR = "http://10.50.8.29:8084";
 //    private static final String ADDR = "http://10.50.8.29";
 
-    private static final String id = "64725e8d4f1a49f29ecd399d6dc6af31";
+    private static final String id = "50b253c32a1a492a9b968332f8664f38";
 
     // 新增
     @Test
@@ -49,6 +49,18 @@ public class TestFormBusinessHospitality {
         }
         params.put("itemList", itemList);
         String result = HttpUtil.post(url, params, null);
+        System.out.println(result);
+        int todo = 3;
+        System.out.println(todo);
+    }
+
+    // 查询
+    @Test
+    public void test2() {
+        String url = ADDR + "/recon/check/oa/form/base/" + id;
+        Map<String, Object> params = new HashMap<>();
+        params.put("type", "171");
+        String result = HttpUtil.get(url, params, null);
         System.out.println(result);
     }
 
