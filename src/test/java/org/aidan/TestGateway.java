@@ -12,10 +12,10 @@ import java.util.regex.Pattern;
 
 public class TestGateway {
 
-//    private static final String ADDR = "http://localhost:8080";
+    private static final String ADDR = "http://localhost:8083";
 //    private static final String ADDR = "http://10.50.8.29:8083";
 //    private static final String ADDR = "http://10.50.8.29";
-    private static final String ADDR = "http://123.59.38.12";
+//    private static final String ADDR = "http://123.59.38.12";
 
     // 测试登录
     @Test
@@ -81,6 +81,16 @@ public class TestGateway {
     public void test5() {
         String uri = ADDR + "/recon/check/init/uriRoleHash";
         String result = HttpUtil.get(uri, null, null);
+        System.out.println(result);
+    }
+
+    // 测试登出接口
+    @Test
+    public void test6() {
+        String url = ADDR + "/recon/open/logout";
+        Map<String, Object> params = new HashMap<>();
+        params.put("token", "NWZmNmIyZWFmODYxNDA5ZmJkZDhjYTY3NWZkNGVkMTM6NjQ2NWEyYTliMGM4NWY5NjBjNDc1N2JkZThlZDQ4NjEzZjJlMmY1ZmFiODVhNDY5MmRkNjU5MTJiNTBhMzQ1YToxNTIzOTYwNTYxNjEw");
+        String result = HttpUtil.get(url, params, null);
         System.out.println(result);
     }
 }

@@ -25,7 +25,7 @@ public class TestFileUpload {
 
     @Test
     public void upload() {
-        String localFile = "E:\\文档\\Nginx反射代理配置及部署说明.docx";
+        String localFile = "E:\\ms-test-0.1.jar";
         CloseableHttpClient httpClient = null;
         CloseableHttpResponse response = null;
         try {
